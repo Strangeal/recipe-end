@@ -4,6 +4,7 @@ import Drawer from "./Drawer";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Link } from "react-router-dom";
 import { menuItems } from "../../data/db";
+
 const Appbar = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
