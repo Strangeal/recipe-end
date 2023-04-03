@@ -7,23 +7,36 @@ import {
   Typography,
 } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 import AvTimerIcon from "@mui/icons-material/AvTimer";
 import { Box } from "@mui/system";
 
-const Headline = () => {
+type recipeProps = {
+  recipe: {
+    recipe_name: string;
+    cooking_time: string;
+    recipe_image: string;
+    likes: number;
+    rating: number;
+    chef_image: string;
+    chef_name: string;
+    posted_time: string;
+  };
+};
+
+const Headline = ({ recipe }: recipeProps) => {
   return (
     <div>
-      <Card sx={{ mx: "1rem" }}>
+      <Card sx={{ borderRadius: 0 }}>
         <Box
-          sx={{ position: "fixed", px: 2, color: "#fff" }}
+          sx={{ position: "fixed", px: 2, color: "#fff", zIndex: 1 }}
           className="headline-header"
         >
           <Typography variant="h6" className="MuiSerif">
             Featured Recipe
           </Typography>
           <Typography variant="h4" className="MuiSerif">
-            Grilled Beef Ribs
+            {recipe.recipe_name}
           </Typography>
 
           <div className="headline-actions">
@@ -33,16 +46,16 @@ const Headline = () => {
             >
               <Typography
                 component="span"
-                className="CardHeader-subheader MuiActionIconsText"
+                className="CardHeader-title MuiActionIconsText"
               >
-                <FavoriteBorderIcon className="MuiActionIcons" />
-                5.2K
+                <AvTimerIcon className="MuiActionIcons" /> {recipe.cooking_time}
               </Typography>
               <Typography
                 component="span"
-                className="CardHeader-title MuiActionIconsText"
+                className="CardHeader-subheader MuiActionIconsText"
               >
-                <AvTimerIcon className="MuiActionIcons" /> 45mins
+                <FavoriteIcon className="MuiActionIcons" />
+                {recipe.likes}
               </Typography>
             </Box>
 
@@ -51,25 +64,32 @@ const Headline = () => {
               className="MuiActionIconsText"
             >
               <StarIcon sx={{ fontSize: 20 }} />
-              5.0
+              {recipe.rating}
             </IconButton>
           </div>
         </Box>
 
-        <div className="headline-img">
+        <div className="headline-img image-inset-shadow">
           <CardMedia
-            sx={{ minHeight: "350px" }}
+            sx={{ height: "350px" }}
             component="img"
-            image="https://img.freepik.com/free-photo/fried-chicken-french-fries-black-cement-floor_1150-28542.jpg?"
+            image={recipe.recipe_image}
           />
+          <div className="shadow-headline"></div>
         </div>
 
         <div className="headline-avatar">
           <CardHeader
-            sx={{ position: "absolute", top: "180px", zIndex: 2 }}
-            avatar={<Avatar sx={{ width: 24, height: 24 }}>R</Avatar>}
-            title="title"
-            subheader="subheader"
+            sx={{
+              position: "absolute",
+              top: "280px",
+              zIndex: 2,
+            }}
+            avatar={
+              <Avatar sx={{ width: 34, height: 34 }} src={recipe.chef_image} />
+            }
+            title={recipe.chef_name}
+            subheader={recipe.posted_time}
           />
         </div>
       </Card>
