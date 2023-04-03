@@ -22,10 +22,10 @@ type itemProps = {
 const Product = ({ item }: itemProps) => {
   return (
     <div className="product-card">
-      <Card elevation={0} sx={{ borderRadius: 5 }}>
+      <Card elevation={0}>
         <div>
           <CardHeader
-            sx={{ position: "fixed", right: 15, zIndex: 1 }}
+            sx={{ position: "fixed", right: 1, zIndex: 1 }}
             action={
               <IconButton
                 sx={{
@@ -61,7 +61,12 @@ const Product = ({ item }: itemProps) => {
           </Box>
         </div>
         <div className="image-inset-shadow">
-          <CardMedia component="img" height="198" image={item.imgPath} />
+          <CardMedia
+            sx={{ borderRadius: 5 }}
+            component="img"
+            height="198"
+            image={item.imgPath}
+          />
           <div className="shadow"></div>
         </div>
         <CardContent sx={{ p: 0, mx: 2 }}>
