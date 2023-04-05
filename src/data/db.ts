@@ -104,3 +104,87 @@ export const recipeList =[
     posted_time: "2 hours ago",
   },
 ];
+
+export const breakFastList = [
+  {
+    name: "Avocado Toast",
+    img: "https://example.com/avocado_toast.jpg",
+    cal: 300,
+  },
+  {
+    name: "Greek Yogurt",
+    img: "https://example.com/greek_yogurt.jpg",
+    cal: 200,
+  },
+  {
+    name: "Oatmeal Nuts",
+    img: "https://example.com/oatmeal.jpg",
+    cal: 250,
+  },
+  {
+    name: "Egg Veggie",
+    img: "https://example.com/egg_scramble.jpg",
+    cal: 350,
+  },
+  {
+    name: "Banana Smoothie",
+    img: "https://example.com/smoothie.jpg",
+    cal: 400,
+  },
+];
+
+export const dinnerList = [
+  {
+    name: "Grilled Salmon",
+    img: "https://example.com/grilled_salmon.jpg",
+    cal: 300,
+  },
+  {
+    name: "Roasted Chicken",
+    img: "https://example.com/roasted_chicken.jpg",
+    cal: 350,
+  },
+  {
+    name: "Vegetable Stir Fry",
+    img: "https://example.com/vegetable_stir_fry.jpg",
+    cal: 250,
+  },
+  {
+    name: "Spaghetti and Meatballs",
+    img: "https://example.com/spaghetti_and_meatballs.jpg",
+    cal: 400,
+  },
+  {
+    name: "Grilled Steak",
+    img: "https://example.com/grilled_steak.jpg",
+    cal: 500,
+  },
+];
+
+export const launchList = [
+  {
+    name: "Grilled Salmon with Asparagus",
+    img: "https://example.com/recipe1.jpg",
+    cal: 350,
+  },
+  {
+    name: "Mediterranean Salad with Chicken",
+    img: "https://example.com/recipe2.jpg",
+    cal: 280,
+  },
+  {
+    name: "Pesto Pasta with Roasted Tomatoes",
+    img: "https://example.com/recipe3.jpg",
+    cal: 420,
+  },
+  {
+    name: "Teriyaki Tofu Bowl",
+    img: "https://example.com/recipe4.jpg",
+    cal: 320,
+  },
+  {
+    name: "Black Bean and Sweet Potato Tacos",
+    img: "https://example.com/recipe5.jpg",
+    cal: 250,
+  },
+];
