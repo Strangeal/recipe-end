@@ -91,3 +91,16 @@ code {
 
 
 /* Product component */
+
+
+/* FoodCategory */
+div.MuiCardHeader-action.css-sgoict-MuiCardHeader-action > .add-btn:hover {
+  background-color: aqua !important;
+}
+
+/* Home */
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
