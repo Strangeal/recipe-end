@@ -19,16 +19,15 @@ const Slides = ({ products }: ProductListProps) => {
       <Swiper
         modules={[Autoplay]}
         autoplay={{ delay: 2000 }}
-        spaceBetween={5}
-        slidesPerView={2}
+        spaceBetween={10}
+        slidesPerView={2.1}
       >
-        {products.map((item) => (
-          <div className="keyProps" key={item.id}>
-            <SwiperSlide>
+        {products &&
+          products.map((item, index) => (
+            <SwiperSlide key={index}>
               <Product item={item} />
             </SwiperSlide>
-          </div>
-        ))}
+          ))}
       </Swiper>
     </div>
   );
