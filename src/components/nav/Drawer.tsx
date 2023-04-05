@@ -25,6 +25,7 @@ const Drawer = () => {
         }}
       >
         <BottomNavigation
+          showLabels
           value={value}
           onChange={(event, newValue) => {
             setValue(newValue);
