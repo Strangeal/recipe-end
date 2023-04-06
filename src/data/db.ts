@@ -24,26 +24,27 @@ export const productList = [
   {
     label: "San Francisco – Oakland Bay Bridge, United States",
     imgPath:
-      "https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60",
-      id: 1,
+      "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680769431/Recipe-App/recipes/micheile-henderson-qw3AyjHNF_k-unsplash_sqv6yb.jpg",
   },
   {
     label: "Bird",
     imgPath:
-      "https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60",
-      id: 2,
+      "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680769903/Recipe-App/recipes/aleisha-kalina-Gi779Hq8THQ-unsplash_ukhm84.jpg",
   },
   {
     label: "Bali, Indonesia",
     imgPath:
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250",
-      id: 3,
+      "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680769427/Recipe-App/recipes/micheile-henderson-mQSztA48y6A-unsplash_yj6rgw.jpg",
   },
   {
     label: "Goč, Serbia",
     imgPath:
-      "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60",
-      id: 4,
+      "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680769370/Recipe-App/recipes/brooke-lark-qdyBKWSzpSI-unsplash_guyueg.jpg",
+  },
+  {
+    label: "Goč, Serbia",
+    imgPath:
+      "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680769768/Recipe-App/recipes/jane-4AFO0pMeBfU-unsplash_r59xxi.jpg",
   },
 ];
 
@@ -108,27 +109,27 @@ export const recipeList =[
 export const breakFastList = [
   {
     name: "Avocado Toast",
-    img: "https://example.com/avocado_toast.jpg",
+    img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680767841/Recipe-App/breakfast/david-b-townsend-IQSDSFO9UuI-unsplash_swtp1l.jpg",
     cal: 300,
   },
   {
     name: "Greek Yogurt",
-    img: "https://example.com/greek_yogurt.jpg",
+    img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768055/Recipe-App/breakfast/ben-kolde-FFqNATH27EM-unsplash_rzhork.jpg",
     cal: 200,
   },
   {
     name: "Oatmeal Nuts",
-    img: "https://example.com/oatmeal.jpg",
+    img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768057/Recipe-App/breakfast/joseph-gonzalez-zcUgjyqEwe8-unsplash_lfstp7.jpg",
     cal: 250,
   },
   {
     name: "Egg Veggie",
-    img: "https://example.com/egg_scramble.jpg",
+    img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768105/Recipe-App/breakfast/eiliv-aceron-uAm1CZMdPCw-unsplash_rtt7cd.jpg",
     cal: 350,
   },
   {
     name: "Banana Smoothie",
-    img: "https://example.com/smoothie.jpg",
+    img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768060/Recipe-App/breakfast/chris-ralston-09HGdZzkP-Q-unsplash_1_ygurwe.jpg",
     cal: 400,
   },
 ];
@@ -136,55 +137,55 @@ export const breakFastList = [
 export const dinnerList = [
   {
     name: "Grilled Salmon",
-    img: "https://example.com/grilled_salmon.jpg",
+    img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768634/Recipe-App/dinner/peter-dawn-DzuzZBlIcsM-unsplash_mcepef.jpg",
     cal: 300,
   },
   {
     name: "Roasted Chicken",
-    img: "https://example.com/roasted_chicken.jpg",
+    img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768630/Recipe-App/dinner/hoja-studio-Thw3nleO3cM-unsplash_fx0hw1.jpg",
     cal: 350,
   },
   {
     name: "Vegetable Stir Fry",
-    img: "https://example.com/vegetable_stir_fry.jpg",
+    img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768539/Recipe-App/dinner/casey-lee-awj7sRviVXo-unsplash_i21db3.jpg",
     cal: 250,
   },
   {
-    name: "Spaghetti and Meatballs",
-    img: "https://example.com/spaghetti_and_meatballs.jpg",
+    name: "Spaghetti Meatballs",
+    img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768559/Recipe-App/dinner/ruyan-ayten-gUFI8SxNvxo-unsplash_alhy0b.jpg",
     cal: 400,
   },
   {
     name: "Grilled Steak",
-    img: "https://example.com/grilled_steak.jpg",
+    img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768627/Recipe-App/dinner/chumil-photo-TK5VlaGqkZc-unsplash_1_vlkaio.jpg",
     cal: 500,
   },
 ];
 
 export const lunchList = [
   {
-    name: "Grilled Salmon with Asparagus",
-    img: "https://example.com/recipe1.jpg",
+    name: "Grilled Salmon",
+    img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768288/Recipe-App/lunch/monika-grabkowska-pCxJvSeSB5A-unsplash_foecvh.jpg",
     cal: 350,
   },
   {
-    name: "Mediterranean Salad with Chicken",
-    img: "https://example.com/recipe2.jpg",
+    name: "Mediterranean Salad",
+    img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768293/Recipe-App/lunch/mariana-medvedeva-fk6IiypMWss-unsplash_qdhqnd.jpg",
     cal: 280,
   },
   {
-    name: "Pesto Pasta with Roasted Tomatoes",
-    img: "https://example.com/recipe3.jpg",
+    name: "Pesto Pasta",
+    img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768299/Recipe-App/lunch/chumil-photo-TK5VlaGqkZc-unsplash_fejxyu.jpg",
     cal: 420,
   },
   {
-    name: "Teriyaki Tofu Bowl",
-    img: "https://example.com/recipe4.jpg",
+    name: "Teriyaki Tofu",
+    img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768306/Recipe-App/lunch/ronise-daluz-LgTyii0GDKQ-unsplash_w656wa.jpg",
     cal: 320,
   },
   {
-    name: "Black Bean and Sweet Potato Tacos",
-    img: "https://example.com/recipe5.jpg",
+    name: "Black Beans",
+    img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768373/Recipe-App/lunch/k8-w8OCrTBTaMc-unsplash_ihuj0c.jpg",
     cal: 250,
   },
 ];
