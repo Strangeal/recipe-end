@@ -112,3 +112,19 @@ div.MuiCardHeader-action.css-sgoict-MuiCardHeader-action > .add-btn:hover {
   gap: 0.625rem;
   margin: 0.5rem;
 }
+
+/* details */
+.details-icon {
+  background-color: #ED6D06 !important;
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
+  color: #000;
+  margin: 0.8rem 0.3rem 0.8rem 0 !important;
+  font-weight: 700;
+  /* margin */
+}
+
+.details-icon svg {
+  font-size: 1.3rem;
+  margin-right: 3px;
+}
