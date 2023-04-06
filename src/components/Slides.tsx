@@ -7,7 +7,6 @@ import Headline from "./Headline";
 
 type ProductListProps = {
   products: {
-    id: number;
     label: string;
     imgPath: string;
   }[];
