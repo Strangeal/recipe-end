@@ -1,6 +1,4 @@
 import {
-  Avatar,
-  Button,
   Card,
   CardContent,
   CardHeader,
@@ -9,8 +7,6 @@ import {
   Typography,
 } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
-import CheckIcon from "@mui/icons-material/Check";
-import React from "react";
 import { Box } from "@mui/system";
 import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
 
@@ -25,9 +21,9 @@ type BreakFastProps = {
 const FoodCategory = ({ items }: BreakFastProps) => {
   return (
     <>
-      <Card elevation={0}>
+      <Card elevation={0} sx={{ position: "relative" }}>
         <CardHeader
-          sx={{ position: "fixed", right: 0 }}
+          sx={{ position: "absolute", right: 0 }}
           action={
             <IconButton className="add-btn" sx={{ bgcolor: "#00ffff" }}>
               <AddIcon
@@ -51,7 +47,7 @@ const FoodCategory = ({ items }: BreakFastProps) => {
           <Typography>{items.name}</Typography>
           <Box
             sx={{
-              position: "fixed",
+              position: "absolute",
               right: 0,
               top: 175,
               bgcolor: "#f0f8ff",
