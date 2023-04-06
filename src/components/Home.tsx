@@ -4,11 +4,9 @@ import {
   recipeList,
   breakFastList,
   dinnerList,
-  launchList,
+  lunchList,
 } from "../data/db";
 import GenSlides from "./GenSlides";
-import FoodCategory from "./categories/FoodCategory";
-import Headline from "./Headline";
 import HeadlineSlides from "./HeadlineSlides";
 import Slides from "./Slides";
 import { Link } from "react-router-dom";
@@ -26,23 +24,23 @@ const Home = () => {
         <Box sx={{ m: 1 }}>
           <div className="category-header">
             <h5>Breakfast</h5>
-            <Link to="">See All</Link>
+            <Link to="/breakfast">See All</Link>
           </div>
           <GenSlides data={breakFastList} />
         </Box>
         <Box sx={{ m: 1 }}>
           <div className="category-header">
             <h5>Dinner</h5>
-            <Link to="">See All</Link>
+            <Link to="/dinner">See All</Link>
           </div>
           <GenSlides data={dinnerList} />
         </Box>
         <Box sx={{ m: 1 }}>
           <div className="category-header">
-            <h5>Launch</h5>
-            <Link to="">See All</Link>
+            <h5>Lunch</h5>
+            <Link to="/lunch">See All</Link>
           </div>
-          <GenSlides data={launchList} />
+          <GenSlides data={lunchList} />
         </Box>
       </>
       <Button
