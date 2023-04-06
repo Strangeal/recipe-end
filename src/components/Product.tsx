@@ -69,7 +69,7 @@ const Product = ({ item }: itemProps) => {
           />
           <div className="shadow"></div>
         </div>
-        <CardContent sx={{ p: 0, mx: 2 }}>
+        <CardContent sx={{ p: 0 }}>
           <Typography sx={{ fontSize: 10 }}>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           </Typography>
