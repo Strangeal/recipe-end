@@ -161,7 +161,7 @@ export const dinnerList = [
   },
 ];
 
-export const launchList = [
+export const lunchList = [
   {
     name: "Grilled Salmon with Asparagus",
     img: "https://example.com/recipe1.jpg",
