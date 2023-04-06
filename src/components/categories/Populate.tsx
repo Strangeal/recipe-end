@@ -12,8 +12,8 @@ const Populate = ({ data }: DataProps) => {
   return (
     <div className="populate">
       {data &&
-        data.map((item) => (
-          <div>
+        data.map((item, index) => (
+          <div key={index}>
             <FoodCategory items={item} />
           </div>
         ))}
