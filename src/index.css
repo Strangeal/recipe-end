@@ -104,3 +104,11 @@ div.MuiCardHeader-action.css-sgoict-MuiCardHeader-action > .add-btn:hover {
   justify-content: space-between;
   align-items: center;
 }
+
+/* Populate */
+.populate {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.625rem;
+  margin: 0.5rem;
+}
