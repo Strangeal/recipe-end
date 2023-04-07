@@ -5,7 +5,6 @@ import Details from "./Details";
 const BreakFast = () => {
   return (
     <>
-      <Details />
       <Populate data={breakFastList} />
     </>
   );
