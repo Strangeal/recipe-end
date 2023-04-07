@@ -5,9 +5,11 @@ import FoodCategory from "./categories/FoodCategory";
 
 type BreakFastProps = {
   data: {
+    id: number;
     name: string;
     img: string;
     cal: number;
+    category: string;
   }[];
 };
 const BreakFastSlides = ({ data }: BreakFastProps) => {
