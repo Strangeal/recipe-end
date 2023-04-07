@@ -1,11 +1,14 @@
 import { Avatar, Card, CardHeader } from "@mui/material";
 import FoodCategory from "./FoodCategory";
+import Details from "./Details";
 
 type DataProps = {
   data: {
+    id: number;
     name: string;
     img: string;
     cal: number;
+    category: string;
   }[];
 };
 
@@ -22,7 +25,7 @@ const Populate = ({ data }: DataProps) => {
       <div className="populate">
         {data &&
           data.map((item, index) => (
-            <div key={index}>
+            <div key={item.id}>
               <FoodCategory items={item} />
             </div>
           ))}
