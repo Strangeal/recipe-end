@@ -11,37 +11,44 @@ import HeadlineSlides from "./HeadlineSlides";
 import Slides from "./Slides";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
+import { useEffect } from "react";
 
 const Home = () => {
+  const renderComponent = [
+    {
+      list: breakFastList,
+      path: "/breakfast",
+      header: "Breakfast",
+    },
+    {
+      list: dinnerList,
+      path: "/dinner",
+      header: "Dinner",
+    },
+    {
+      list: lunchList,
+      path: "/lunch",
+      header: "Lunch",
+    },
+  ];
+
   return (
-    <Box>
+    <>
       <HeadlineSlides recipes={recipeList} />
       <Box sx={{ m: 1 }}>
         Today's Recipe
         <Slides products={productList} />
       </Box>
       <>
-        <Box sx={{ m: 1 }}>
-          <div className="category-header">
-            <h5>Breakfast</h5>
-            <Link to="/breakfast">See All</Link>
-          </div>
-          <GenSlides data={breakFastList} />
-        </Box>
-        <Box sx={{ m: 1 }}>
-          <div className="category-header">
-            <h5>Dinner</h5>
-            <Link to="/dinner">See All</Link>
-          </div>
-          <GenSlides data={dinnerList} />
-        </Box>
-        <Box sx={{ m: 1 }}>
-          <div className="category-header">
-            <h5>Lunch</h5>
-            <Link to="/lunch">See All</Link>
-          </div>
-          <GenSlides data={lunchList} />
-        </Box>
+        {renderComponent.map((comp, index) => (
+          <Box sx={{ m: 1 }} key={index}>
+            <div className="category-header">
+              <h5>{comp.header}</h5>
+              <Link to={comp.path}>See All</Link>
+            </div>
+            <GenSlides data={comp.list} />
+          </Box>
+        ))}
       </>
       <Button
         sx={{
@@ -54,7 +61,7 @@ const Home = () => {
       >
         Make A Collection
       </Button>
-    </Box>
+    </>
   );
 };
 
