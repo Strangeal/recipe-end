@@ -11,20 +11,28 @@ import CheckIcon from "@mui/icons-material/Check";
 import { Box } from "@mui/system";
 import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
 import { useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import Details from "./Details";
 
 type BreakFastProps = {
   items: {
+    id: number;
     name: string;
     img: string;
     cal: number;
+    category: string;
   };
 };
 
 const FoodCategory = ({ items }: BreakFastProps) => {
-  const [add, setAdd] = useState(false);
+  const [add, setAdd] = useState(true);
 
   const handleClick = () => {
-    setAdd(true);
+    if (add) {
+      setAdd(false);
+    } else {
+      setAdd(true);
+    }
   };
 
   return (
@@ -66,7 +74,9 @@ const FoodCategory = ({ items }: BreakFastProps) => {
         />
 
         <CardContent sx={{ p: 0 }}>
-          <Typography>{items.name}</Typography>
+          <Typography>
+            <Link to={`/${items.category}/${items.id}`}>{items.name}</Link>
+          </Typography>
           <Box
             sx={{
               position: "absolute",
