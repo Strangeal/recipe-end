@@ -170,7 +170,7 @@ export const breakFastList = [
   {
     id: 3,
     category: "breakfast",
-    name: "Egg and Cheese Sandwich",
+    name: "Cheese Sandwich",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768057/Recipe-App/breakfast/joseph-gonzalez-zcUgjyqEwe8-unsplash_lfstp7.jpg",
     cal: 400,
     cooking_time: "15 minutes",
@@ -190,7 +190,7 @@ export const breakFastList = [
   },
   {
     id: 4,
-    name: "Greek Yogurt Parfait",
+    name: "Greek Yogurt",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768105/Recipe-App/breakfast/eiliv-aceron-uAm1CZMdPCw-unsplash_rtt7cd.jpg",
     cal: 250,
     category: "breakfast",
@@ -209,7 +209,7 @@ export const breakFastList = [
   },
   {
     id: 5,
-    name: "Oatmeal with Apples and Cinnamon",
+    name: "Oatmeal Cinnamon",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768060/Recipe-App/breakfast/chris-ralston-09HGdZzkP-Q-unsplash_1_ygurwe.jpg",
     cal: 300,
     category: "breakfast",
@@ -266,7 +266,7 @@ export const dinnerList = [
   },
   {
     id: 2,
-    name: "Grilled Salmon with Asparagus",
+    name: "Grilled Salmon",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768630/Recipe-App/dinner/hoja-studio-Thw3nleO3cM-unsplash_fx0hw1.jpg",
     cal: 380,
     category: "dinner",
@@ -362,7 +362,7 @@ export const dinnerList = [
   },
   {
     id: 5,
-    name: "Vegetable Stir Fry",
+    name: "Vegetable Stir",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768627/Recipe-App/dinner/chumil-photo-TK5VlaGqkZc-unsplash_1_vlkaio.jpg",
     cal: 320,
     category: "dinner",
@@ -396,7 +396,7 @@ export const dinnerList = [
   },
   {
     id: 6,
-    name: "Spaghetti and Meatballs",
+    name: "Spaghetti Meatballs",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768627/Recipe-App/dinner/chumil-photo-TK5VlaGqkZc-unsplash_1_vlkaio.jpg",
     cal: 650,
     category: "dinner",
@@ -465,7 +465,7 @@ export const dinnerList = [
 export const lunchList = [
   {
     id: 1,
-    name: "Spicy Chicken Wrap",
+    name: "Chicken Wrap",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768288/Recipe-App/lunch/monika-grabkowska-pCxJvSeSB5A-unsplash_foecvh.jpg",
     cal: 450,
     category: "lunch",
@@ -500,7 +500,7 @@ export const lunchList = [
   },
   {
     id: 2,
-    name: "Greek Salad with Grilled Shrimp",
+    name: "Grilled Shrimp",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768293/Recipe-App/lunch/mariana-medvedeva-fk6IiypMWss-unsplash_qdhqnd.jpg",
     cal: 350,
     category: "lunch",
@@ -533,7 +533,7 @@ export const lunchList = [
   },
   {
     id: 3,
-    name: "Mediterranean Veggie Wrap",
+    name: "Veggie Wrap",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768299/Recipe-App/lunch/chumil-photo-TK5VlaGqkZc-unsplash_fejxyu.jpg",
     cal: 300,
     category: "lunch",
@@ -565,7 +565,7 @@ export const lunchList = [
   },
   {
     id: 4,
-    name: "Turkey Club Sandwich",
+    name: "Turkey Club",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768306/Recipe-App/lunch/ronise-daluz-LgTyii0GDKQ-unsplash_w656wa.jpg",
     cal: 550,
     category: "lunch",
@@ -594,7 +594,7 @@ export const lunchList = [
   },
   {
     id: 5,
-    name: "Quinoa and Black Bean Salad",
+    name: "Quinoa Salad",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768373/Recipe-App/lunch/k8-w8OCrTBTaMc-unsplash_ihuj0c.jpg",
     cal: 400,
     category: "lunch",
