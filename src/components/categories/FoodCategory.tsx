@@ -10,7 +10,7 @@ import AddIcon from "@mui/icons-material/Add";
 import CheckIcon from "@mui/icons-material/Check";
 import { Box } from "@mui/system";
 import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Details from "./Details";
 
@@ -21,19 +21,37 @@ type BreakFastProps = {
     img: string;
     cal: number;
     category: string;
+    cooking_time: string;
   };
 };
 
 const FoodCategory = ({ items }: BreakFastProps) => {
   const [add, setAdd] = useState(true);
+  const [food, setFood] = useState([]);
 
+  // FIX ME
+  useEffect(() => {});
   const handleClick = () => {
     if (add) {
       setAdd(false);
+      const foodData = {
+        name: items.name,
+        cal: items.cal,
+        time: items.cooking_time,
+        image: items.img,
+        id: items.id,
+        status: add,
+      };
+      const savedFoods = JSON.stringify(foodData);
+      localStorage.setItem("food", savedFoods);
+      console.log("Added");
     } else {
       setAdd(true);
+      console.log("deleted");
     }
   };
+
+  // END ==>
 
   return (
     <>
@@ -70,6 +88,7 @@ const FoodCategory = ({ items }: BreakFastProps) => {
           sx={{ borderRadius: 3 }}
           component="img"
           height="198"
+          alt={items.name}
           image={items.img}
         />
 
