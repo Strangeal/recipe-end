@@ -62,7 +62,7 @@ const FoodCategory = ({ items }: BreakFastProps) => {
             <IconButton
               onClick={handleClick}
               className="add-btn"
-              sx={{ bgcolor: "#00ffff" }}
+              sx={{ bgcolor: "#ADDDCF", p: 0.8 }}
             >
               {add ? (
                 <AddIcon
@@ -70,14 +70,16 @@ const FoodCategory = ({ items }: BreakFastProps) => {
                     border: "1px solid #000",
                     borderRadius: "50%",
                     fontSize: 12,
+                    p: 0.2,
                   }}
                 />
               ) : (
                 <CheckIcon
                   sx={{
                     border: "1px solid #000",
-                    borderRadius: "50%",
+                    borderRadius: 0.5,
                     fontSize: 12,
+                    p: 0.2,
                   }}
                 />
               )}
@@ -85,7 +87,7 @@ const FoodCategory = ({ items }: BreakFastProps) => {
           }
         />
         <CardMedia
-          sx={{ borderRadius: 3 }}
+          sx={{ borderRadius: 3, mb: 1 }}
           component="img"
           height="198"
           alt={items.name}
@@ -93,9 +95,9 @@ const FoodCategory = ({ items }: BreakFastProps) => {
         />
 
         <CardContent sx={{ p: 0 }}>
-          <Typography>
-            <Link to={`/${items.category}/${items.id}`}>{items.name}</Link>
-          </Typography>
+          <Link className="category-name" to={`/${items.category}/${items.id}`}>
+            {items.name}
+          </Link>
           <Box
             sx={{
               position: "absolute",
