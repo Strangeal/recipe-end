@@ -10,6 +10,7 @@ type BreakFastProps = {
     img: string;
     cal: number;
     category: string;
+    cooking_time: string;
   }[];
 };
 const BreakFastSlides = ({ data }: BreakFastProps) => {
