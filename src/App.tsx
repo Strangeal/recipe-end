@@ -14,8 +14,10 @@ function App() {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
   return (
-    <header className="App-header">
-      <Appbar />
+    <>
+      <header className="App-header">
+        <Appbar />
+      </header>
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -29,7 +31,7 @@ function App() {
           <Route path="/dinner/:id" element={<Details />} />
         </Routes>
       </div>
-    </header>
+    </>
   );
 }
 
