@@ -10,7 +10,7 @@ import GenSlides from "./GenSlides";
 import HeadlineSlides from "./HeadlineSlides";
 import Slides from "./Slides";
 import { Link } from "react-router-dom";
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import { useEffect } from "react";
 
 const Home = () => {
@@ -35,32 +35,39 @@ const Home = () => {
   return (
     <>
       <HeadlineSlides recipes={recipeList} />
-      <Box sx={{ m: 1 }}>
-        Today's Recipe
+
+      <Box sx={{ mx: "0.8rem", mt: 1.4 }}>
+        <Typography variant="h6" sx={{ fontSize: 18 }}>
+          Today's Recipe
+        </Typography>
         <Slides products={productList} />
+        <>
+          {renderComponent.map((comp, index) => (
+            <Box key={index}>
+              <div className="category-header">
+                <Typography variant="h6" sx={{ fontSize: 18 }}>
+                  {comp.header}
+                </Typography>
+                <Link className="all-category" to={comp.path}>
+                  See All
+                </Link>
+              </div>
+              <GenSlides data={comp.list} />
+            </Box>
+          ))}
+        </>
+        <Button
+          sx={{
+            mt: 2,
+            width: "100%",
+            color: "#fff",
+            bgcolor: "#ED6D06",
+            textAlign: "center",
+          }}
+        >
+          Make A Collection
+        </Button>
       </Box>
-      <>
-        {renderComponent.map((comp, index) => (
-          <Box sx={{ m: 1 }} key={index}>
-            <div className="category-header">
-              <h5>{comp.header}</h5>
-              <Link to={comp.path}>See All</Link>
-            </div>
-            <GenSlides data={comp.list} />
-          </Box>
-        ))}
-      </>
-      <Button
-        sx={{
-          // mx: 20,
-          width: "100%",
-          color: "#fff",
-          bgcolor: "#ED6D06",
-          textAlign: "center",
-        }}
-      >
-        Make A Collection
-      </Button>
     </>
   );
 };
