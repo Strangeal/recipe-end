@@ -3,6 +3,7 @@
 body {
   margin: 0;
   font-family: 'Roboto Mono', monospace;
+  background-color: #FDF0E6;
 }
 
 code {
@@ -36,11 +37,8 @@ code {
 /* App */
 .App {
   margin-bottom: 5rem !important;
+  
 }
-
-/* #root > header > div.App > div > div > div > div > div.MuiCardHeader-content.css-1qbkelo-MuiCardHeader-content > span {
-  display: flex;
-} */
 
 .card-actions {
   position: fixed;
@@ -79,6 +77,10 @@ code {
   color: #fff !important;
 }
 
+.headline-avatar.MuiCardHeader-subheader {
+  color: #fff !important;
+}
+
 .headline-avatar > div > div.MuiCardHeader-avatar {
   margin-right: 8px !important;
 }
@@ -93,21 +95,31 @@ code {
 }
 
 
-
+/* Home */
 
 /* Product component */
 
 
 /* FoodCategory */
 div.MuiCardHeader-action.css-sgoict-MuiCardHeader-action > .add-btn:hover {
-  background-color: aqua !important;
+  background-color: #ADDDCF !important;
 }
+
+.category-name {
+  text-decoration: none;
+  color: #000;
+}
+div.MuiCardContent-root.css-1i9wt8r-MuiCardContent-root {
+  padding-bottom: 10px;
+}
+
 
 /* Home */
 .category-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0.4rem 0 !important;
 }
 
 /* Populate */
@@ -126,10 +138,37 @@ div.MuiCardHeader-action.css-sgoict-MuiCardHeader-action > .add-btn:hover {
   color: #000;
   margin: 0.8rem 0.3rem 0.8rem 0 !important;
   font-weight: 700;
-  /* margin */
 }
 
 .details-icon svg {
   font-size: 1.3rem;
   margin-right: 3px;
 }
+
+
+/* bookmarks */
+.bookmark-content{
+  padding: 0 10px !important;
+}
+.App .bookmark-card {
+  background-color: #FBFBFA !important;
+}
+.bookmark-action {
+  display: flex;
+    gap: 10px; 
+}
+.bookmark-btn {
+  font-size: 10px !important;
+  background-color: #F9D4A7 !important;
+  border-radius: 8px !important;
+  padding: 6px 14px !important;
+}
+
+.bookmark-text {
+  font-size: 15px !important;
+}
+
+.MuiCard-root {
+  background-color: transparent !important;
+}
+
