@@ -5,6 +5,11 @@ import {
   CardMedia,
   IconButton,
   Tab,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableRow,
   Tabs,
   Typography,
 } from "@mui/material";
@@ -15,13 +20,21 @@ import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { breakFastList, lunchList, dinnerList } from "../../data/db";
+import { CheckBox } from "@mui/icons-material";
 
 type singleDataProp = {
   id: number;
   name: string;
   img: string;
   cal: number;
+  cooking_time: string;
+  description: string;
+  ingredients: {
+    Ing: string;
+    quantity: string;
+  }[];
 };
+
 const Details = () => {
   const [value, setValue] = useState(0);
   const [data, setData] = useState<singleDataProp>();
@@ -78,7 +91,7 @@ const Details = () => {
               <div className="details-action">
                 <IconButton className="details-icon MuiActionIconsText">
                   <AvTimerIcon />
-                  20 Min
+                  {data.cooking_time}
                 </IconButton>
                 <IconButton className="details-icon MuiActionIconsText">
                   <LocalFireDepartmentIcon />
@@ -90,14 +103,7 @@ const Details = () => {
               </div>
 
               <Typography sx={{ fontFamily: "sans-serif" }}>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Consequatur vel maxime culpa, voluptate aliquam aspernatur ut
-                totam quae rem? Cum odio maxime doloribus impedit sequi soluta
-                voluptatem odit totam incidunt. Similique totam magnam rem
-                deserunt natus est amet pariatur aliquid voluptatem soluta
-                molestiae illo cupiditate perspiciatis ex laudantium suscipit
-                non, explicabo temporibus excepturi repellat corrupti. Optio
-                autem vitae dicta magni.
+                {data.description}
               </Typography>
             </CardContent>
 
@@ -108,7 +114,6 @@ const Details = () => {
                   <Tab label="Video Instructions" />
                 </Tabs>
               </Box>
-              <hr />
               <>
                 {value === 0 && (
                   <Box
@@ -118,15 +123,49 @@ const Details = () => {
                       alignItems: "center",
                     }}
                   >
-                    <Box>
-                      <Typography>Ingredient</Typography>
-                    </Box>
-                    <Box>
-                      <Typography>Quantity</Typography>
-                    </Box>
+                    {/* <Box> */}
+                    <TableContainer>
+                      <Table>
+                        <TableBody>
+                          {data.ingredients.map((td, index) => (
+                            <TableRow key={index}>
+                              <TableCell sx={{ p: 1, borderBottom: "none" }}>
+                                <CheckBox />
+                              </TableCell>
+                              <TableCell sx={{ p: 1, borderBottom: "none" }}>
+                                {td.Ing}
+                              </TableCell>
+                              <TableCell
+                                sx={{
+                                  p: 1,
+                                  borderBottom: "none",
+                                  width: 120,
+                                  textAlign: "right",
+                                }}
+                              >
+                                {td.quantity}
+                              </TableCell>
+                            </TableRow>
+                          ))}
+                        </TableBody>
+                      </Table>
+                    </TableContainer>
                   </Box>
+                  // </Box>
                 )}
-                {value === 1 && <Typography>Item two</Typography>}
+                {value === 1 && (
+                  <>
+                    <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/kwq4vl610iY"
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    ></iframe>
+                  </>
+                )}
               </>
             </Box>
           </>
