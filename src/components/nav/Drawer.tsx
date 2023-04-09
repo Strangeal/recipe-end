@@ -10,6 +10,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { menuItems } from "../../data/db";
 
+const drawerWidth = 59;
 const Drawer = () => {
   const [value, setValue] = useState(0);
 
@@ -30,6 +31,7 @@ const Drawer = () => {
           onChange={(event, newValue) => {
             setValue(newValue);
           }}
+          sx={{ height: `calc(10% - ${drawerWidth}px)` }}
         >
           {menuItems.map(({ name, path, icon }, index) => (
             <ListItem key={index + name} className="draw-item" sx={{ p: 0 }}>
