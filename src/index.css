@@ -33,6 +33,11 @@ code {
   font-size: 18px !important;
 }
 
+/* App */
+.App {
+  margin-bottom: 5rem !important;
+}
+
 /* #root > header > div.App > div > div > div > div > div.MuiCardHeader-content.css-1qbkelo-MuiCardHeader-content > span {
   display: flex;
 } */
