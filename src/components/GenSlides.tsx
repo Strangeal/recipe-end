@@ -14,11 +14,12 @@ type BreakFastProps = {
   }[];
 };
 const BreakFastSlides = ({ data }: BreakFastProps) => {
+  const sliceData = data.slice(0, 3);
   return (
     <>
       <Swiper spaceBetween={10} slidesPerView={2.1}>
-        {data &&
-          data.map((item, index) => (
+        {sliceData &&
+          sliceData.map((item, index) => (
             <SwiperSlide key={index}>
               <FoodCategory items={item} />
             </SwiperSlide>
