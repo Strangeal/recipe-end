@@ -9,6 +9,7 @@ type DataProps = {
     img: string;
     cal: number;
     category: string;
+    cooking_time: string;
   }[];
 };
 
