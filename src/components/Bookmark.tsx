@@ -16,7 +16,11 @@ const Bookmark = () => {
     <>
       <Typography variant="h5">Your Bookmarks</Typography>
 
-      <Card elevation={0} sx={{ display: "flex", bgcolor: "#FDF0E6", p: 1 }}>
+      <Card
+        elevation={0}
+        className="bookmark-card"
+        sx={{ display: "flex", bgcolor: "#FBFBFA", p: 1 }}
+      >
         <CardMedia
           sx={{ width: "33%", height: 80, borderRadius: 2 }}
           component="img"
