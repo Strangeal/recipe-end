@@ -70,7 +70,7 @@ const Product = ({ item }: itemProps) => {
           <div className="shadow"></div>
         </div>
         <CardContent sx={{ p: 0 }}>
-          <Typography sx={{ fontSize: 10 }}>
+          <Typography sx={{ fontSize: 15, lineHeight: 1.2 }}>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           </Typography>
           <Box
