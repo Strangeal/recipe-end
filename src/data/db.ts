@@ -1,22 +1,37 @@
 import HomeIcon from "@mui/icons-material/Home";
 import MarkChatUnreadIcon from "@mui/icons-material/MarkChatUnread";
 import HistoryIcon from "@mui/icons-material/History";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { RiUserSmileLine } from "react-icons/ri";
+import { GiChefToque } from "react-icons/gi";
+import { TbBulb } from "react-icons/tb";
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
 export const menuItems = [
   {
+    name: "Favorite",
+    path: "/bookmark",
+    icon: FavoriteBorderIcon,
+  },
+  {
+    name: "Ideas",
+    path: "/about",
+    icon: TbBulb,
+  },
+  {
     name: "Home",
     path: "/",
-    icon: HomeIcon,
+    icon: GiChefToque,
   },
   {
-    name: "About",
-    path: "/about",
-    icon: MarkChatUnreadIcon,
+    name: "Search",
+    path: "/search",
+    icon: SearchOutlinedIcon,
   },
   {
-    name: "Contact",
-    path: "/contact",
-    icon: HistoryIcon,
+    name: "Profile",
+    path: "/profile",
+    icon: RiUserSmileLine,
   },
 ];
 
@@ -123,6 +138,7 @@ export const recipeList = [
 
 export const breakFastList = [
   {
+    status: false,
     id: 1,
     name: "Avocado Toast",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680767841/Recipe-App/breakfast/david-b-townsend-IQSDSFO9UuI-unsplash_swtp1l.jpg",
@@ -144,6 +160,7 @@ export const breakFastList = [
     ],
   },
   {
+    status: false,
     id: 2,
     name: "Blueberry Pancakes",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768055/Recipe-App/breakfast/ben-kolde-FFqNATH27EM-unsplash_rzhork.jpg",
@@ -168,6 +185,7 @@ export const breakFastList = [
     ],
   },
   {
+    status: false,
     id: 3,
     category: "breakfast",
     name: "Cheese Sandwich",
@@ -189,6 +207,7 @@ export const breakFastList = [
     ],
   },
   {
+    status: false,
     id: 4,
     name: "Greek Yogurt",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768105/Recipe-App/breakfast/eiliv-aceron-uAm1CZMdPCw-unsplash_rtt7cd.jpg",
@@ -208,6 +227,7 @@ export const breakFastList = [
     ],
   },
   {
+    status: false,
     id: 5,
     name: "Oatmeal Cinnamon",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768060/Recipe-App/breakfast/chris-ralston-09HGdZzkP-Q-unsplash_1_ygurwe.jpg",
@@ -233,6 +253,7 @@ export const breakFastList = [
 
 export const dinnerList = [
   {
+    status: false,
     id: 1,
     name: "Mushroom Risotto",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768634/Recipe-App/dinner/peter-dawn-DzuzZBlIcsM-unsplash_mcepef.jpg",
@@ -265,6 +286,7 @@ export const dinnerList = [
     ],
   },
   {
+    status: false,
     id: 2,
     name: "Grilled Salmon",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768630/Recipe-App/dinner/hoja-studio-Thw3nleO3cM-unsplash_fx0hw1.jpg",
@@ -290,6 +312,7 @@ export const dinnerList = [
     ],
   },
   {
+    status: false,
     id: 3,
     name: "Chicken Fajitas",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768539/Recipe-App/dinner/casey-lee-awj7sRviVXo-unsplash_i21db3.jpg",
@@ -326,6 +349,7 @@ export const dinnerList = [
     ],
   },
   {
+    status: false,
     id: 4,
     name: "Beef Stroganoff",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768559/Recipe-App/dinner/ruyan-ayten-gUFI8SxNvxo-unsplash_alhy0b.jpg",
@@ -361,6 +385,7 @@ export const dinnerList = [
     ],
   },
   {
+    status: false,
     id: 5,
     name: "Vegetable Stir",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768627/Recipe-App/dinner/chumil-photo-TK5VlaGqkZc-unsplash_1_vlkaio.jpg",
@@ -395,6 +420,7 @@ export const dinnerList = [
     ],
   },
   {
+    status: false,
     id: 6,
     name: "Spaghetti Meatballs",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768627/Recipe-App/dinner/chumil-photo-TK5VlaGqkZc-unsplash_1_vlkaio.jpg",
@@ -432,6 +458,7 @@ export const dinnerList = [
     ],
   },
   {
+    status: false,
     id: 7,
     name: "Grilled Salmon",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768627/Recipe-App/dinner/chumil-photo-TK5VlaGqkZc-unsplash_1_vlkaio.jpg",
@@ -464,6 +491,7 @@ export const dinnerList = [
 
 export const lunchList = [
   {
+    status: false,
     id: 1,
     name: "Chicken Wrap",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768288/Recipe-App/lunch/monika-grabkowska-pCxJvSeSB5A-unsplash_foecvh.jpg",
@@ -499,6 +527,7 @@ export const lunchList = [
     ],
   },
   {
+    status: false,
     id: 2,
     name: "Grilled Shrimp",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768293/Recipe-App/lunch/mariana-medvedeva-fk6IiypMWss-unsplash_qdhqnd.jpg",
@@ -532,6 +561,7 @@ export const lunchList = [
     ],
   },
   {
+    status: false,
     id: 3,
     name: "Veggie Wrap",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768299/Recipe-App/lunch/chumil-photo-TK5VlaGqkZc-unsplash_fejxyu.jpg",
@@ -564,6 +594,7 @@ export const lunchList = [
     ],
   },
   {
+    status: false,
     id: 4,
     name: "Turkey Club",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768306/Recipe-App/lunch/ronise-daluz-LgTyii0GDKQ-unsplash_w656wa.jpg",
@@ -593,6 +624,7 @@ export const lunchList = [
     ],
   },
   {
+    status: false,
     id: 5,
     name: "Quinoa Salad",
     img: "https://res.cloudinary.com/dxsom7jmx/image/upload/v1680768373/Recipe-App/lunch/k8-w8OCrTBTaMc-unsplash_ihuj0c.jpg",
