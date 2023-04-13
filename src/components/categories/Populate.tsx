@@ -10,6 +10,7 @@ type DataProps = {
     cal: number;
     category: string;
     cooking_time: string;
+    status: boolean;
   }[];
 };
 
@@ -27,7 +28,7 @@ const Populate = ({ data }: DataProps) => {
         {data &&
           data.map((item, index) => (
             <div key={item.id}>
-              <FoodCategory items={item} />
+              <FoodCategory item={item} />
             </div>
           ))}
       </div>

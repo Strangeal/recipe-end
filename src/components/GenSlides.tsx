@@ -11,6 +11,7 @@ type BreakFastProps = {
     cal: number;
     category: string;
     cooking_time: string;
+    status: boolean;
   }[];
 };
 const BreakFastSlides = ({ data }: BreakFastProps) => {
@@ -21,7 +22,7 @@ const BreakFastSlides = ({ data }: BreakFastProps) => {
         {sliceData &&
           sliceData.map((item, index) => (
             <SwiperSlide key={index}>
-              <FoodCategory items={item} />
+              <FoodCategory item={item} />
             </SwiperSlide>
           ))}
       </Swiper>
