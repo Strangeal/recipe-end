@@ -4,13 +4,6 @@ import {
   CardContent,
   CardMedia,
   IconButton,
-  Tab,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableRow,
-  Tabs,
   Typography,
 } from "@mui/material";
 import React, { SyntheticEvent, useEffect, useState } from "react";
@@ -20,7 +13,7 @@ import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { breakFastList, lunchList, dinnerList } from "../../data/db";
-import { CheckBox } from "@mui/icons-material";
+import TableList from "../TableList";
 
 type singleDataProp = {
   id: number;
@@ -36,14 +29,14 @@ type singleDataProp = {
 };
 
 const Details = () => {
-  const [value, setValue] = useState(0);
+  // const [value, setValue] = useState(0);
   const [data, setData] = useState<singleDataProp>();
   const navigate = useNavigate();
   const { id } = useParams();
 
-  const handleChnage = (event: SyntheticEvent, newValue: number) => {
-    setValue(newValue);
-  };
+  // const handleChnage = (event: SyntheticEvent, newValue: number) => {
+  //   setValue(newValue);
+  // };
 
   const location = useLocation();
   const getFoodDetails = () => {
@@ -108,65 +101,7 @@ const Details = () => {
             </CardContent>
 
             <Box>
-              <Box sx={{ borderColor: "divider" }}>
-                <Tabs value={value} onChange={handleChnage}>
-                  <Tab label="Recipe Ingrediants" />
-                  <Tab label="Video Instructions" />
-                </Tabs>
-              </Box>
-              <>
-                {value === 0 && (
-                  <Box
-                    sx={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                    }}
-                  >
-                    {/* <Box> */}
-                    <TableContainer>
-                      <Table>
-                        <TableBody>
-                          {data.ingredients.map((td, index) => (
-                            <TableRow key={index}>
-                              <TableCell sx={{ p: 1, borderBottom: "none" }}>
-                                <CheckBox />
-                              </TableCell>
-                              <TableCell sx={{ p: 1, borderBottom: "none" }}>
-                                {td.Ing}
-                              </TableCell>
-                              <TableCell
-                                sx={{
-                                  p: 1,
-                                  borderBottom: "none",
-                                  width: 120,
-                                  textAlign: "right",
-                                }}
-                              >
-                                {td.quantity}
-                              </TableCell>
-                            </TableRow>
-                          ))}
-                        </TableBody>
-                      </Table>
-                    </TableContainer>
-                  </Box>
-                  // </Box>
-                )}
-                {value === 1 && (
-                  <>
-                    <iframe
-                      width="560"
-                      height="315"
-                      src="https://www.youtube.com/embed/kwq4vl610iY"
-                      title="YouTube video player"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    ></iframe>
-                  </>
-                )}
-              </>
+              <TableList ingredient={data.ingredients} />
             </Box>
           </>
         )}
