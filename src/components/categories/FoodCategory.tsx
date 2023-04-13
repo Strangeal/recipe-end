@@ -15,43 +15,54 @@ import { Link, useParams } from "react-router-dom";
 import Details from "./Details";
 
 type BreakFastProps = {
-  items: {
+  item: {
     id: number;
     name: string;
     img: string;
     cal: number;
     category: string;
     cooking_time: string;
+    status: boolean;
   };
 };
 
-const FoodCategory = ({ items }: BreakFastProps) => {
-  const [add, setAdd] = useState(true);
-  const [food, setFood] = useState([]);
+type FoodItem = {
+  id: number;
+  name: string;
+  category: string;
+  status: boolean;
+};
 
-  // FIX ME
-  useEffect(() => {});
-  const handleClick = () => {
-    if (add) {
-      setAdd(false);
-      const foodData = {
-        name: items.name,
-        cal: items.cal,
-        time: items.cooking_time,
-        image: items.img,
-        id: items.id,
-        status: add,
-      };
-      const savedFoods = JSON.stringify(foodData);
-      localStorage.setItem("food", savedFoods);
-      console.log("Added");
-    } else {
-      setAdd(true);
-      console.log("deleted");
+const FoodCategory = ({ item }: BreakFastProps) => {
+  const [foodList, setFoodList] = useState<FoodItem[]>([]);
+  const [isFound, setIsFound] = useState(false);
+
+  useEffect(() => {
+    const savedFoods = localStorage.getItem(item.category);
+    if (savedFoods) {
+      setFoodList(JSON.parse(savedFoods));
     }
-  };
+    const result = foodList.find((food) => food.id === item.id);
+    setIsFound(Boolean(result));
+  }, [item, foodList]);
 
-  // END ==>
+  const handleClick = () => {
+    const savedFoods = localStorage.getItem(item.category) || "[]";
+    const foods = JSON.parse(savedFoods) as FoodItem[];
+    const resultIndex = foods.findIndex((food) => food.id === item.id);
+    if (resultIndex !== -1) {
+      const newFoods = [...foods];
+      newFoods.splice(resultIndex, 1);
+      setFoodList(newFoods);
+      localStorage.setItem(item.category, JSON.stringify(newFoods));
+    } else {
+      const newFood = { ...item, status: true };
+      const newFoods = [...foods, newFood];
+      setFoodList(newFoods);
+      localStorage.setItem(item.category, JSON.stringify(newFoods));
+    }
+    setIsFound(!isFound);
+  };
 
   return (
     <>
@@ -59,21 +70,13 @@ const FoodCategory = ({ items }: BreakFastProps) => {
         <CardHeader
           sx={{ position: "absolute", right: 0 }}
           action={
-            <IconButton
-              onClick={handleClick}
-              className="add-btn"
-              sx={{ bgcolor: "#ADDDCF", p: 0.8 }}
-            >
-              {add ? (
-                <AddIcon
-                  sx={{
-                    border: "1px solid #000",
-                    borderRadius: "50%",
-                    fontSize: 12,
-                    p: 0.2,
-                  }}
-                />
-              ) : (
+            isFound ? (
+              // <>
+              <IconButton
+                onClick={handleClick}
+                className="add-btn"
+                sx={{ bgcolor: "#ADDDCF", p: 0.8 }}
+              >
                 <CheckIcon
                   sx={{
                     border: "1px solid #000",
@@ -82,21 +85,37 @@ const FoodCategory = ({ items }: BreakFastProps) => {
                     p: 0.2,
                   }}
                 />
-              )}
-            </IconButton>
+              </IconButton>
+            ) : (
+              <IconButton
+                onClick={handleClick}
+                className="add-btn"
+                sx={{ bgcolor: "#ADDDCF", p: 0.8 }}
+              >
+                <AddIcon
+                  sx={{
+                    border: "1px solid #000",
+                    borderRadius: "50%",
+                    fontSize: 12,
+                    p: 0.2,
+                  }}
+                />
+              </IconButton>
+            )
+            // </>
           }
         />
         <CardMedia
           sx={{ borderRadius: 3, mb: 1 }}
           component="img"
           height="198"
-          alt={items.name}
-          image={items.img}
+          alt={item.name}
+          image={item.img}
         />
 
         <CardContent sx={{ p: 0 }}>
-          <Link className="category-name" to={`/${items.category}/${items.id}`}>
-            {items.name}
+          <Link className="category-name" to={`/${item.category}/${item.id}`}>
+            {item.name}
           </Link>
           <Box
             sx={{
@@ -109,7 +128,7 @@ const FoodCategory = ({ items }: BreakFastProps) => {
           >
             <Typography sx={{ display: "flex" }}>
               <LocalFireDepartmentIcon />
-              {items.cal} Cal
+              {item.cal} Cal
             </Typography>
           </Box>
         </CardContent>
