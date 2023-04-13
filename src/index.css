@@ -34,6 +34,11 @@ code {
   font-size: 18px !important;
 }
 
+/* Drawer */
+.react-icon {
+  font-size: 30px;
+}
+
 /* App */
 .App {
   margin-bottom: 5rem !important;
