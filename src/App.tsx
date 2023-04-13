@@ -9,6 +9,7 @@ import Dinner from "./components/categories/Dinner";
 import Details from "./components/categories/Details";
 import { useEffect } from "react";
 import Bookmark from "./components/Bookmark";
+import Profile from "./components/Profile";
 
 function App() {
   useEffect(() => {
@@ -22,8 +23,9 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Bookmark />} />
+          <Route path="/bookmark" element={<Bookmark />} />
           <Route path="/breakfast" element={<BreakFast />} />
           <Route path="/lunch" element={<Lunch />} />
           <Route path="/dinner" element={<Dinner />} />
