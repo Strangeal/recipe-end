@@ -18,11 +18,12 @@ const Drawer = () => {
     <Box>
       <List
         sx={{
-          bgcolor: "#1E1D1D",
+          bgcolor: "#fff",
           position: "fixed",
           width: "100%",
           bottom: 0,
           zIndex: 999,
+          p: 0,
         }}
       >
         <BottomNavigation
@@ -31,7 +32,7 @@ const Drawer = () => {
           onChange={(event, newValue) => {
             setValue(newValue);
           }}
-          sx={{ height: `calc(10% - ${drawerWidth}px)` }}
+          sx={{ bgcolor: "transparent" }}
         >
           {menuItems.map(({ name, path, icon }, index) => (
             <ListItem key={index + name} className="draw-item" sx={{ p: 0 }}>
