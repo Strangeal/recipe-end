@@ -40,11 +40,12 @@ const FoodCategory = ({ item }: BreakFastProps) => {
   useEffect(() => {
     const savedFoods = localStorage.getItem(item.category);
     if (savedFoods) {
-      setFoodList(JSON.parse(savedFoods));
+      const parsedFoods = JSON.parse(savedFoods) as FoodItem[];
+      setFoodList(parsedFoods);
+      const result = parsedFoods.find((food) => food.id === item.id);
+      setIsFound(Boolean(result));
     }
-    const result = foodList.find((food) => food.id === item.id);
-    setIsFound(Boolean(result));
-  }, [item, foodList]);
+  }, [item]);
 
   const handleClick = () => {
     const savedFoods = localStorage.getItem(item.category) || "[]";
@@ -75,14 +76,15 @@ const FoodCategory = ({ item }: BreakFastProps) => {
               <IconButton
                 onClick={handleClick}
                 className="add-btn"
-                sx={{ bgcolor: "#ADDDCF", p: 0.8 }}
+                sx={{ bgcolor: "#1D2A45", p: 0.8 }}
               >
                 <CheckIcon
                   sx={{
-                    border: "1px solid #000",
+                    border: "1px solid #EFF8FF",
                     borderRadius: 0.5,
                     fontSize: 12,
                     p: 0.2,
+                    color: "#EFF8FF",
                   }}
                 />
               </IconButton>
