@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { ProSidebarProvider } from "react-pro-sidebar";
 
 export const theme = createTheme({
   typography: {
@@ -32,7 +33,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <ThemeProvider theme={theme}>
-        <App />
+        <ProSidebarProvider>
+          <App />
+        </ProSidebarProvider>
       </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>
