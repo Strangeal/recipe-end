@@ -177,3 +177,18 @@ div.MuiCardContent-root.css-1i9wt8r-MuiCardContent-root {
   background-color: transparent !important;
 }
 
+/* Profile */
+.sub-about {
+  margin: 1rem 0 !important;
+}
+
+.social-text {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.social-icon {
+  margin-right: 10px;
+  font-size: 1.8rem !important;
+}
