@@ -1,6 +1,7 @@
 import { Avatar, Card, CardHeader } from "@mui/material";
 import FoodCategory from "./FoodCategory";
 import Details from "./Details";
+import Profile from "../Profile";
 
 type DataProps = {
   data: {
